@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  margin: 2rem;
 }
 
 .App-logo {
@@ -35,4 +35,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-container {
+  flex-direction: "column";
+  display: "flex";
+  height: 50rem;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+
+.custom-button {
+  height: 3rem;
+  width: 7rem;
+}
+
+.react-player {
+  border-radius: 2rem;
+}
+
+#videoElement {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
