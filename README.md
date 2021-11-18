@@ -5,7 +5,7 @@ Welnes Video Platform is a web application that enables you upload, display, and
 ## Run locally
 
 - Just clone the repo.
-- Run `docker-compose up`.
+- Run `npm install` followed by `npm start`.
 - Visit `localhost:3000` to see this beauty!
 
 ## Technologies used
