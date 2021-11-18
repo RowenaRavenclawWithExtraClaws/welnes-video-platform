@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Welnes Video Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welnes Video Platform is a web application that enables you upload, display, and play videos.
 
-## Available Scripts
+## Run locally
 
-In the project directory, you can run:
+- Just clone the repo.
+- Run `docker-compose up`.
+- Visit `localhost:3000` to see this beauty!
 
-### `yarn start`
+## Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React `^17.0.2`
+- Redux `^4.1.2`
+- TypeScript `^4.1.2`
+- Firebase SDK `^9.4.1`
+- Bootstrao `^5.1.3`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project folders
 
-### `yarn test`
+- `components` contains all the UI components needed by the app.
+- `firbase` contains firebase configutaion and operations.
+- `redux` contains redux slices and store.
+- `styles` contains all css and scss files.
+- `helpers.ts` implements several functions as helpers for the main components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Execution flow
 
-### `yarn build`
+- User selects a video or captures it via webcam
+- A screenshot is taken to be saved as this video thumbnail.
+- User uploads the video
+- Both the video and the thumbnail are uploaded and saved in the Firebase Storage.
+- Both URLs for the video and the thumbnail are stored as a new document in the Firebase Firestore database.
+- The videos redux stored will be updated with the new video.
+- The video will be displayed with it's thumbnail in the videos list.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Challenges
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The only challenge for me was using the Canvas API, it was the first time using it. I struggled a bit with it but eventually, every thing worked as expected.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Potential improvements
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add pagination.
+- Display more info about the videos (date created, description, etc...).
+- Open videos in a new tab.
+- Add user account.
+- Add unit and integration testing.
