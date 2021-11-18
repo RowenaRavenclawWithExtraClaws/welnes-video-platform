@@ -74,6 +74,7 @@ const CaptureModal = () => {
 
   useEffect(() => {
     if (open) setTimeout(() => captureWebCam(), 1000);
+    // eslint-disable-next-line
   }, [open]);
 
   const handleVideoUploadAndUpdateList = async () => {

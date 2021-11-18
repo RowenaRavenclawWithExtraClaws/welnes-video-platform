@@ -22,7 +22,7 @@ const VideoSection = () => {
       toggleFetching(false);
     };
 
-    getVideos();
+    getVideos(); // eslint-disable-next-line
   }, []);
 
   if (fetching) return <FetchIndicator />;
