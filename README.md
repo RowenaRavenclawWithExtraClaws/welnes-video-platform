@@ -1,6 +1,6 @@
 # Welnes Video Platform
 
-Welnes Video Platform is a web application that enables you upload, display, and play videos.
+Welnes Video Platform is a web application that enables you upload, display, and play videos. you can test the application [here](https://welnes-video-platform.vercel.app/)
 
 ## Run locally
 
